@@ -116,7 +116,7 @@ legend {
 }
 
 body {
-  font-family: "Graphik LCG";
+  font-family: "Roboto";
   font-weight: 400;
   background-color: #FFF;
   color: #051534;
@@ -264,6 +264,7 @@ button {
   transition: 0.2s;
 }
 button.btn-green {
+  font-size: 20px;
   background-color: #00C064;
   color: #fff;
 }

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Graphik LCG';
+    font-family: 'Roboto';
     font-weight: 400;
     background-color: $clr-bg-main;
     color: $clr-main-text;
@@ -114,6 +114,7 @@ button{
     padding: 18px 28px;
     transition: .2s;
     &.btn-green{
+        font-size: 20px;
         background-color: $clr-btn-green;
         color: #fff;
         &:hover,&:focus{
