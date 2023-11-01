@@ -1,0 +1,10 @@
+@mixin screenMd {
+    @media screen and (max-width: $screen-md) {
+        @content;
+    }
+}
+@mixin screenSm{
+    @media screen and (max-width: $screen-sm) {
+        @content;
+    }
+}

@@ -1,0 +1,14 @@
+.call-to-action{
+    max-width: 70%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 250px auto;
+    @include screenMd {
+        max-width: 100%;
+        margin: 50px auto 200px auto;
+    }
+    @include screenSm {
+        margin: 0 auto 100px auto;
+    }
+}

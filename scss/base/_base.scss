@@ -1,0 +1,165 @@
+body {
+    font-family: 'Graphik LCG';
+    font-weight: 400;
+    background-color: $clr-bg-main;
+    color: $clr-main-text;
+    font-size: 16px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    @include screenMd{
+        gap: 150px;
+    }
+    @include screenSm{
+        gap: 100px;
+    }
+}
+.section{
+    display: flex;
+    gap: 15px;
+    @include screenMd{
+        flex-direction: column;
+    }
+    &.vertical{
+        flex-direction: column;
+    }
+}
+a {
+    color: $clr-main-text;
+    transition: color 0.2s ease-in;
+}
+
+p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    @include screenSm{
+        font-size: 18px;
+    }
+}
+.regular{
+    font-weight: 500;
+}
+.semi-bold{
+    font-weight: 600;
+}
+.bold{
+    font-weight: 700;
+}
+
+h1{
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.1;
+    font-size: calc(27px + 1.5vw);    
+    @include screenMd{
+        font-size: calc(21px + 2vw);    
+    }
+}
+h2{
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 1.1;
+    @include screenSm{
+        font-size: 30px;
+    }
+}
+h3{
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 1.1;
+    @include screenSm{
+        font-size: 30px;
+    }
+}
+h4{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.2;
+    color: #fff;
+}
+h5{
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    @include screenSm{
+        font-size: 20px;
+    }
+}
+h6{
+    margin-bottom: 10px;
+}
+.container {
+    margin: 0 auto;
+    align-self: center;
+    max-width: 1170px;
+    padding: 0 30px;
+    @include screenMd {
+        max-width: 100%;
+    }
+    @include screenSm {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+button{
+    border-radius: 4px;
+    width: max-content;
+    padding: 18px 28px;
+    transition: .2s;
+    &.btn-green{
+        background-color: $clr-btn-green;
+        color: #fff;
+        &:hover,&:focus{
+            background-color: $clr-btn-green-hover;
+        }
+    };
+    &.btn-blue{
+        background-color: $clr-btn-blue;
+        color: #fff;
+        &:hover,&:focus{
+            background-color: $clr-btn-blue-hover;
+        }
+    }
+    @include screenMd{
+        padding: calc(8px + 1.1vw);
+    }
+}
+
+// other styles
+
+.text-right {
+    text-align: right;
+}
+
+.visually-hidden {
+    /* Contain text within 1px box */
+	height: 1px;
+	overflow: hidden;
+	width: 1px;
+
+	/* Keep the layout */
+	position: absolute;
+
+	/* Remove any visible trace (e.g. background color) */
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%); /* browsers in the future */
+
+	/* Prevent the screen reader to skip spaces between words */
+	white-space: nowrap;
+}
+
+.none {
+    display: none !important;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}

@@ -1,0 +1,68 @@
+.about{
+    display: flex;
+    align-items: center;
+    @include screenMd{
+        gap: 60px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    @include screenSm{
+        gap: 20px;
+    }
+}
+.img-container{
+    position: relative;
+
+    min-width: 200px;
+    max-width: 200px;
+    height: 200px;
+
+    border-radius: 50px;
+    background: #ececec85;
+    text-align: center;
+    @include screenSm {
+        min-width: 160px;
+        max-width: 160px;
+        height: 160px;
+    }
+}
+#jar{
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    left: 27%;
+    width: 90px;
+    height: 196px;
+}
+#shadow{
+    position: absolute;
+    z-index: 1;
+    bottom: 15px;
+    left: 27%;     
+}
+@include screenSm {
+    #jar{
+        position: absolute;
+        z-index: 2;
+        bottom: 20px;
+        left: 27%;
+        width: calc(90px*(16/20));
+        height: calc(196px*(16/20));
+    }
+    #shadow{
+        position: absolute;
+        z-index: 1;
+        bottom: 15px;
+        left: 22%;     
+    }
+}
+.about p{
+    line-height: 1.5;
+    font-size: 32px;
+    @include screenMd{
+        text-align: center;
+    }
+    @include screenSm{
+        font-size: 22px;
+    }
+}

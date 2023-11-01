@@ -1,0 +1,223 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: $clr-bg-header;
+
+    padding-top: 230px;
+    margin-bottom: 200px;
+    @include screenMd{
+        padding-top: 200px;
+        margin-bottom: 150px;
+    }
+    @include screenSm{
+        padding-top: 140px;
+        margin-bottom: 100px;
+    }
+}
+    // Header top
+.header__top-row{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+    height: 80px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 28px 30px;
+    
+    background-color: $clr-bg-header__top;
+    backdrop-filter: blur(5px);
+    
+    font-size: calc(10px + 0.4vw);
+    @include screenSm{
+        gap: 0;
+        padding: 23px 13px;
+        height: 70px;
+    }
+}
+
+    // left side
+.navbar{
+    display: flex;
+    gap: calc(20px + 2vw);
+
+    @include screenSm{
+        margin: 0 auto;
+    }
+}
+.logo{
+    width: 96px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.nav__list{
+    display: flex;
+    align-items: center;
+    gap: calc(5px + 1vw);   
+    transition: 0.4s;
+    & li a:hover,a:focus{
+        text-shadow:0px 0px 1px black;
+    }
+    @include screenMd{
+        display: none;
+    }
+}   
+    // Right side
+.auth{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.auth button{
+    @include screenMd{
+        font-size: 14px;
+    }
+    @include screenSm{
+        display: none;
+    }
+}
+.demo__sign-up{
+    display: flex;
+    position: relative;
+    padding: 12px 15px 12px 30px;
+    padding-left: 30px;
+    border-radius: 4px;
+    text-align: center;
+    &:hover{
+        background-color: #ebebeb;
+    }
+    @include screenMd {
+        display: none;
+    }
+}
+.demo__sign-up::before{
+    content: "";
+    background: url('../assets/images/demo.png') no-repeat center center/cover;
+    position:absolute;
+    top: 25%;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    @include screenMd {
+        display: none;
+    }
+}
+.login-btn{
+    padding: 12px 20px;
+    color: $clr-main-text;
+    gap: 10px;
+    border-radius: 4px;
+    background-color: rgba(233, 233, 233, 0.13);
+    border: 1px solid rgba(5, 21, 52, 0.30);
+    &:hover{
+        background-color: #ebebeb;
+    }
+}
+.reg-btn{
+    padding: 12px 20px;
+    gap: 10px;
+    border-radius: 4px;
+}
+.menu-btn{
+    display: none;
+    @include screenMd{
+        display: block;
+    }
+    @include screenSm{
+        position: absolute;
+        top: 22px;
+        right: 30px;
+    }
+}
+    // header content
+        // header title
+.header__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+
+    max-width: 800px;
+    @include screenMd{
+        gap: calc(10px + 1vw);
+    }
+}
+.header-table{
+    position: relative;
+    margin-top: 40px;
+    width: 100%;
+    @include screenMd{
+        margin-top: calc(20px + 2vw);
+    }
+}
+.header-table div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 100%;
+    background-color: $clr-bg-header;
+    box-shadow: 0px 0px 20px 0px rgba(65, 65, 65, 0.103);
+    @include screenMd{
+     background-color: rgba(255, 255, 255, 0.548);
+    }
+    @include screenSm{
+        display: none;
+    }
+}
+
+#table__img{
+    position: relative;
+    z-index: 1;
+}
+//    icons
+#banknote-icon-container{
+    width: calc(30px + 4.9vw);
+    height: calc(30px + 4.9vw);
+    padding: calc((30px + 4.9vw)/4);
+    
+    position: absolute;
+    z-index: 3;
+    top: 12%;
+    left: calc(3% - 5.5vw);
+}
+#bank-icon-container{
+    width: calc(16px + 4.5vw);
+    height: calc(16px + 4.5vw);
+    padding: calc((16px + 4.5vw)/4);
+
+    position: absolute;
+    z-index: 0;
+    bottom: 12%;
+    left:calc(3% - 5.5vw);
+}
+#box-icon-container{
+    width: calc(30px + 4.9vw);
+    height: calc(30px + 4.9vw);
+    padding: calc((30px + 4.9vw)/4);
+    
+    position: absolute;
+    z-index: 3;
+    top: calc(40% - 2vw);
+    right:calc(-5% - 0.5vw);
+}
+#car-icon-container{
+    width: calc(14px + 4vw);
+    height: calc(14px + 4vw);
+    padding: calc((14px + 4vw)/4);
+
+    position: absolute;
+    z-index: 2;
+
+    bottom: calc(48% - 2vw);
+    right:calc(3% - 3vw);
+}
+

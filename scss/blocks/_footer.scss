@@ -1,0 +1,280 @@
+footer{
+    width: 100%;
+    background-color: $clr-footer-bg;
+    color: white;
+    min-height: 500px;
+    height: max-content;
+    padding-top: 60px;
+    
+    @include screenSm{
+        padding: 50px 15px 0;
+    }
+}
+.footer-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 25%));
+
+    gap: 0 24px;
+    grid-template-areas:
+        "logo logo logo logo"
+        "left left right right"
+        "payment payment apps apps"
+        "docsNsocial docsNsocial docsNsocial docsNsocial";
+
+        
+    @include screenMd{
+        grid-template-columns: repeat(2, 50%);
+        grid-template-areas:
+            "logo social"
+            "left right"
+            "payment apps"
+            "docs docs";
+    }
+    @include screenSm{
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "logo"
+            "left"
+            "right"
+            "apps"
+            "social"
+            "docs";
+    }
+}
+.footer__logo-icon{
+    margin-right: 15px;
+    height: 45px;
+}
+.footer__logo{
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    grid-area: logo;
+}
+
+.grid-left, .grid-right {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 24px;
+    margin-bottom: 100px;
+    @include screenMd{
+        margin-bottom: 80px;
+        grid-auto-flow: row;
+    }
+    @include screenSm {
+        margin-bottom: 0px;
+        gap: 0;
+    }
+}
+.grid-left{
+    grid-area: left;
+}
+.grid-right{
+    grid-area: right;
+}
+.grid-payment{
+    grid-area: payment;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    @include screenSm{
+        display: none;
+    }
+}
+
+.grid-apps{
+    grid-area: apps;
+    display: flex;
+    justify-content: end;
+    gap: 8px;
+    margin-bottom: 20px;
+    @include screenSm{
+        justify-content: start;
+        margin-bottom: 30px;
+    }
+}
+.app-button{
+    display: flex;
+    padding: 12px;
+    gap: 8px;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.20);
+    &:hover{
+        border: 2px solid white;
+    }
+}
+.app-button h4 {
+    font-size: 14px;
+}
+.grid-docs-n-socials{
+    grid-area: docsNsocial;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    @include screenMd{
+        display: none;
+    }
+}
+.docs{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+    transform: scale(1);
+    & a img:hover{
+        transform: scale(1.1);
+    }
+    @include screenMd{
+        justify-content: end;
+        align-items: baseline;
+        margin-left: 170px;
+        margin-right: 15px;
+    }
+    @include screenSm{
+        justify-content: start;
+        margin-left: 0;
+
+    }
+}
+.grid-docs{
+    display: none;
+    @include screenMd{
+        display: flex;
+        grid-area: docs;
+        padding-top: 25px;
+    }
+}
+.grid-socials{
+    display: none;
+    @include screenMd{
+        display: flex;
+        grid-area: social;
+    }
+}
+.grid-list-elements li a{
+    color: white
+}
+.grid-list ul li a{
+    color: #8394B5;
+    &:hover{
+        color: white;
+    }
+}
+.footer-list-item__title{
+    margin-bottom: 15px;    
+    @include screenMd{
+        margin-bottom: 5px;
+    }
+    @include screenSm{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.arrow{
+    display: none;
+    @include screenSm{
+        display: block;
+    }
+}
+
+.grid-list-elements{
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    &.horizontal{
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        gap: 20px;
+        @include screenSm{
+            flex-direction: column;
+            align-items: baseline;
+        }
+    }
+    @include screenMd{
+        margin-bottom: 10px;
+    }
+}
+.OOO-Adesk{
+    @include screenMd{
+        color: white;
+    }
+}
+.grid-list-elements li a{
+    font-size: 14px;
+    color: #8394B5;
+    line-height: 1.2;
+}
+.email{
+    color: #8394B5;
+}
+.contacts-title, .info-title{
+    display: none;
+    @include screenSm{
+        display: flex;
+    }
+}
+.arrow-active{
+    @include screenSm{
+        transition: 0.2s;
+        transform: rotate(-180deg);
+    }
+}
+.arrow-unactive{
+    @include screenSm{
+        transition: 0.2s;
+        transform: rotate(0);
+    }
+}
+.grid-list{
+    position: relative;
+}
+.ul-unactive{
+    @include screenSm {
+        position: relative;
+        z-index: -1;
+
+        pointer-events: none;
+
+        max-height: 0;
+        height: 0;
+        & li {
+            height: 0;
+        }
+        opacity: 0;
+    
+        transition: height 0.6s ease-in-out, max-height 0.6s ease, opacity 0.6s ease-out, transform 0.4s ease-out;
+        transform: translate(0, -80px);
+    }
+}
+.ul-active{
+    @include screenSm {
+        position: relative;
+        z-index: 1;
+
+        max-height: 450px;
+        opacity: 1;
+    
+        transition: height 0.6s ease-in-out, max-height 0.6s ease, opacity 0.6s ease-out, transform 0.4s ease-out;
+        transform: translate(0, 0);
+    }
+}

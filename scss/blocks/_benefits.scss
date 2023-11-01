@@ -1,0 +1,38 @@
+.benefit{
+    display: flex;
+    gap: 80px;
+
+    @include screenMd{
+        text-align: center;
+        gap: 40px;
+    }
+    @include screenSm{
+        gap: 20px;
+        text-align: left;
+    }
+
+    &.reversed{
+        flex-direction: row-reverse;
+        @include screenMd{
+            flex-direction: column;
+        }
+    }   
+}
+.benefit-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 40%;
+    @include screenMd{
+        max-width: 100%;
+    }
+    @include screenSm{
+        gap: 15px;
+    }
+}
+.benefit__img-container{
+    max-width: 50%;
+    @include screenMd{
+        max-width: 100%;
+    }
+}
